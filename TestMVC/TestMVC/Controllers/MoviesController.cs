@@ -10,11 +10,11 @@ namespace TestMVC.Controllers
     public class MoviesController : Controller
     {
         // GET: Movies
-        public ActionResult Index()
+        public ActionResult Random()
         {
-            var movie = new Movies();
-            movie.MovieName = "pashmak";
-            return Content(movie.MovieName);
+            var movie = new Movies() {MovieName = "Pashmak"};
+            //movie.MovieName = "pashmak";
+            return View(movie.MovieName);
         }
     }
 }
