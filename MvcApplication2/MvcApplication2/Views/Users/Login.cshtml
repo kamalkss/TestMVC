@@ -1,0 +1,15 @@
+﻿@model MvcApplication2.Models.Users_login
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>برای ورود نامکاربر و کلمه عبور یکسان وارد کنید</h2>
+
+
+@using (@Html.BeginForm())
+{ @Html.ValidationSummary(true);
+    <label>نام کاربری @Html.TextBoxFor(model => model.Username)</label>@Html.ValidationMessageFor(model => model.Username) <br />
+    <label>کلمه عبور @Html.PasswordFor(model => model.Password)</label>@Html.ValidationMessageFor(model => model.Password)<br />
+    <label>@Html.CheckBoxFor(model => model.RemmeberMe) مرا به خاطر بسپار</label><br />
+    <input type="submit" value="ورود کاربر" />
+}

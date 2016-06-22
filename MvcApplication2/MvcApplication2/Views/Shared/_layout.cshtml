@@ -1,0 +1,30 @@
+﻿@using MvcApplication2.Models;
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>نرم افزار MVC - @ViewBag.Title</title>
+    <style >
+        body {
+            direction:rtl;
+        }
+    </style>
+</head>
+
+<body>
+   
+    @if (! (Session["User"] is Users_login) )
+    {
+        @Html.ActionLink("ورود کاربران", "Login", "Users");
+    }
+    else
+    {
+       Users_login  user = (Users_login) Session["User"]; 
+        @user.Username;
+        @Html.ActionLink("خروج کاربر ", "Logout", "Users");
+    }
+    <hr />
+    @RenderBody()
+</body>
+</html>
