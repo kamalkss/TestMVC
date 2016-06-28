@@ -1,0 +1,76 @@
+
+@font-face
+{
+	font-family:ciconv1;
+	src:url(CarIcons.ttf);
+}
+
+
+[class*=gic-]
+{
+	font-family:ciconv1;
+}
+
+
+
+/*-------------------------------------------*/
+
+.gic-newUser:before
+{
+	display:inline-block;
+	content:'\0021';
+}
+.gic-info:before
+{
+	display:inline-block;
+	content:'\0022';
+}
+
+.gic-slideright:before
+{
+	display:inline-block;
+	content:'\0023';
+}
+
+
+.gic-slideleft:before
+{
+	display:inline-block;
+	content:'\0024';
+}
+
+.gic-store:before
+{
+	display:inline-block;
+	content:'\0025';
+}
+
+.gic-gallery:before
+{
+	display:inline-block;
+	content:'\0026';
+}
+
+.gic-News:before
+{
+	display:inline-block;
+	content:'\0027';
+}
+
+.gic-carSpecifications:before
+{
+	display:inline-block;
+	content:'\0029';
+}
+
+.gic-UsersCarSpecifications:before
+{
+	display:inline-block;
+	content:'\0028';
+}
+
+.gic-Diagnostic:before
+{
+	display:inline-block;
+	content:'\002A';
+}
