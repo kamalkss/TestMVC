@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>نام وبسایت</title>
+
+<link href="Styles/Fonts/Fonts.css" rel="stylesheet" type="text/css">
+<link href="Styles/Fonts/CarIcons.css" rel="stylesheet" type="text/css">
+<script src="Scripts/jquery-3.0.0.js"></script>
+
+<style media="screen and (min-width:700px)">
+*
+{
+	position:relative;
+	box-sizing:border-box;
+	margin:0; padding:0;
+}
+body
+{
+	direction:rtl;
+	font-family:f2;
+	background:black;
+	color:white;
+}
+
+#backgrundHolder
+{
+	position:absolute;
+	width:100%;
+	height:100vh;
+	background: no-repeat center;
+	background-size: 100% 100%;
+	
+	overflow:hidden;
+}
+#backgrundHolder > * { position:absolute; width:100%; height:100%; } 
+#backgrundHolder img { position:absolute; width:100%; height:100%; } 
+
+.page
+{
+	min-height:100vh;
+}
+
+#header 
+{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-items:center;
+	
+	background:rgba(0,0,0,0.70);
+	border-bottom: thin solid rgba(255,255,255,0.45);
+}
+	#headerTitle { font-family:f1; font-size:320%; }
+	#headerNavigation{ text-align: center; }
+	#headerNavigation a
+	{
+		color:inherit;
+		text-decoration:none;
+		display:inline-block;
+		padding:0 10px;
+	}
+	#headerNavigation a:hover
+	{
+		color:rgba(255,255,255,0.75);
+		text-shadow:0 0 2px #FFFFFF;
+	}
+	
+	#headerSearch
+	{
+		border:thin solid;
+		border-radius:5px;
+		display:flex;
+		overflow:hidden;
+	}
+		#headerSerarchTXT 
+		{ 
+			border:none; 
+			background:none; 
+			color:white; 
+			width:100%;
+			height:100%;
+			padding:3px;
+			text-align:center;
+		}
+		
+		#headerSearcBtn	{ border:none; background:white; border-left:thin solid white;}
+		#headerSearcBtn:hover { background:rgba(0,0,0,0.84); color:white; }
+		#headerSearcBtn:active { box-shadow: 0 0 3px 1px #FFFFFF inset; }
+	
+	
+	
+	
+	#home-slideNavigation
+	{
+		position:absolute;
+		bottom:0; left:0; right:0;
+		
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:center;
+		align-items:center;
+		
+		font-size:250%;
+	}
+		#home-slideNavigation a
+		{
+			color:inherit;
+			text-decoration:none;
+			display:inline-block;
+			width:70px; height:50px;
+			background-size:100% 100%;
+			overflow:hidden;
+			border-radius:5px;
+			border:thin solid;
+			
+			margin:5px;
+			opacity: 0.3;
+			transition:linear 0.3s;
+		}
+		#home-slideNavigation a:hover { opacity: 1;}
+		#home-slideNavigation a.crt { opacity: 1; border-color:black; box-shadow:0 0 3px #FFFFFF;}
+		
+	
+	#page1-navigation
+	{
+		/*background:rgba(0,0,0,0.60);*/
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		
+		font-size:250%;
+		opacity:0.35;
+		
+		transition:linear 0.3s;
+	}
+	#page1-navigation:hover
+	{
+		opacity:1;
+	}
+		#page1-navigation a
+		{
+			color:rgba(255,255,255,0.70);
+			display:inline-block;
+			text-align:center;
+			text-shadow:0 0  1px #000000 ;
+			padding:20px;
+			
+			border-radius:5px;
+			overflow:hidden;
+			margin: 0 10px;
+		}
+		#page1-navigation a:hover
+		{
+			color:#FFFFFF;
+		}
+		
+		#page1-navigation a[data-title]:after
+		{
+			content:attr(data-title);
+			position:absolute;
+			color:white;
+			font-size:40%;
+			left:0; right:0;  top:100%;
+			height:100%;
+			
+			display:flex; justify-content:center; align-items:center;
+			
+			background:rgba(0,0,0,0.63);
+			
+			transition:ease 0.3s;
+		}
+		#page1-navigation a[data-title]:hover:after
+		{
+			top:0;
+		}
+		
+		
+		@keyframes show
+		{
+			from{ opacity:0; } 
+			to { opacity:1;}
+		}
+		
+		.show
+		{
+			animation-name:show;
+			animation-duration:2s;
+			animation-timing-function:ease;
+		}
+</style>
+
+</head>
+
+<body>
+	<div id="backgrundHolder">
+    	<div><img src="../Ford-GT-Black-1080p-HD-Wallpaper-Car.jpg" /></div>
+        <div><img src="../audi_q7_coastline_interior-wide.jpg" /></div>
+        <div><img src="Images/porsche_panamera_stingray_gtr_10-wallpaper-3554x1999.jpg" /></div>
+    </div>
+    
+    <div class="page" id="home">
+        <header id="header">
+        	<h1 id="headerTitle">نام وبسایت</h1>
+            
+            <nav id="headerNavigation">
+            	<a href="javascript: Slide_Next(0);">خانه</a>
+                <a href="javascript: Slide_Next(1);">عنوان 1</a>
+                <a href="javascript: Slide_Next(2);">عنوان 2</a>
+                <a href="#">درباره ما</a>
+                <a href="#">تماس با ما</a>
+            </nav>
+            
+            <div id="headerSearch">
+            	<button id="headerSearcBtn"><section class="gic-Search"></section></button>
+                <input type="text" id="headerSerarchTXT" />
+            </div>
+        </header>
+    
+    	<div id="home-slideNavigation">
+        	
+        </div>
+    </div>
+    
+    <div class="page" id="page1">
+    	<div id="page1-navigation">
+        	<a href="#" data-title="فروشگاه"><section class="gic-store"></section></a>
+            <a href="#" data-title="ویدیو"><section class="gic-gallery"></section></a>
+            <a href="#" data-title="اخبار"><section class="gic-News"></section></a>
+            <a href="#" data-title="مشخصات خودروها"><section class="gic-carSpecifications"></section></a>
+            <a href="#" data-title="خودروهای کاربران"><section class="gic-UsersCarSpecifications"></section></a>
+            <a href="#" data-title="عیب یابی خودرو"><section class="gic-Diagnostic"></section></a>
+        </div>
+    </div>
+    
+</body>
+
+
+<script>
+var currentSlide = 0;
+var nextSlide = 0;
+var ssto = -1;
+
+function Slide_Next(ind)
+{
+	clearTimeout(ssto);
+	
+	cn = document.getElementById('backgrundHolder');
+	ci = document.getElementById('home-slideNavigation');
+	
+	t = cn.children.length;
+	
+	
+	cn.children[currentSlide].style.zIndex = -1;
+	if(cn.children[currentSlide].classList.contains('show'))
+		cn.children[currentSlide].classList.remove('show');
+		
+	if(ci.children[currentSlide].classList.contains('crt'))
+		ci.children[currentSlide].classList.remove('crt');
+	
+	/*ci.children[currentSlide].style.boxShadow = "none";
+	ci.children[currentSlide].style.borderColor = "white";
+	ci.children[currentSlide].style.opacity = 0.3;*/
+		
+	cn.children[ind].style.zIndex = 0;
+	cn.children[ind].classList.add('show');
+
+	ci.children[ind].classList.add('crt');
+	
+	/*ci.children[ind].style.boxShadow = "0 0 3px 0 #FFFFFF";
+	ci.children[ind].style.borderColor = "black";
+	ci.children[ind].style.opacity = 0.6;*/
+	
+	for(i = 0 ; i < cn.children.length ; i++)
+	{
+		if(i != ind && i != currentSlide)
+			cn.children[i].style.zIndex = -2;
+	}
+	
+	currentSlide = ind;
+	nextSlide++;
+	if(nextSlide >= t)
+		nextSlide = 0;
+		
+	ssto = setTimeout(function(){Slide_Next(nextSlide);},10000);
+}
+
+function slideshow_ConfigItems()
+{
+	cn = document.getElementById('backgrundHolder');
+	t = cn.children.length;
+	cd = document.getElementById('home-slideNavigation');
+	
+	for(i = 0 ; i < cn.children.length ; i++)
+	{
+		img = cn.children[i].getElementsByTagName('img')[0];
+		
+		a = document.createElement('a');
+		a.setAttribute('href',"javascript: Slide_Next("+i+")");
+		a.style.backgroundImage =  "url('"+img.src+"')";
+		
+		cd.appendChild(a);
+	}
+}
+
+
+slideshow_ConfigItems();
+Slide_Next(0);
+
+</script>
+
+</html>
