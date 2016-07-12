@@ -14,7 +14,7 @@ namespace TestMVC.Controllers
         {
             var movie = new Movies() {MovieName = "Pashmak"};
             //movie.MovieName = "pashmak";
-            return View(movie.MovieName);
+            return View(movie);
         }
     }
 }
