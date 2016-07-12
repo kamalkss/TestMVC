@@ -1,0 +1,60 @@
+.float-right
+{
+	display:inline-block;
+	float:right;
+}
+.float-left
+{
+	display:inline-block;
+	float:left;
+}
+.clear-right
+{
+	display:inline-block;
+	clear:right;
+}
+.clear-left
+{
+	display:inline-block;
+	clear:left;
+}
+.clear-both
+{
+	display:inline-block;
+	clear:both;
+}
+
+.flex-center-center
+{
+	display:flex; justify-content:center; align-items:center; 
+}
+.flex-column
+{
+	flex-direction:column;
+}
+.flex-wrap
+{
+	flex-wrap:wrap;
+}
+
+
+.width-20p
+{
+	box-sizing:border-box;
+	width:20%;
+}
+.width-30p
+{
+	box-sizing:border-box;
+	width:30%;
+}
+.width-70p
+{
+	box-sizing:border-box;
+	width:70%;
+}
+.width-80p
+{
+	box-sizing:border-box;
+	width:80%;
+}
